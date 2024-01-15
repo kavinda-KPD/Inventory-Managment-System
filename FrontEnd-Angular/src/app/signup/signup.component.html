@@ -1,0 +1,16 @@
+<h2>SignUp Form</h2>
+<form [formGroup]="signupForm" (ngSubmit)="onSignUp()">
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>User Name</mat-label>
+      <input matInput type="text" placeholder="Ex. Kavinda" id="inputUserName" formControlName="userName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Ex. Ka123" id="inputUserPassword" formControlName="userPassword">
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" type="submit">Sign Up</button>
+</form>
+<a routerLink="/login">Already registered? Click to Login!!</a>

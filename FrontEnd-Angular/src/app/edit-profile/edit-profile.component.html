@@ -1,0 +1,26 @@
+<div mat-dialog-title>
+    <h1>User Profile ID: {{logedUserId}} Edit</h1>
+</div>
+
+<form [formGroup]="editProfileForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input matInput type="text" placeholder="Ex. Kavinda" formControlName="userName">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>User Password</mat-label>
+                <input matInput type="text" placeholder="123" formControlName="userPassword">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" >Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Ok</button>
+    </div>
+</form>
+
+
